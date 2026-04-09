@@ -3,156 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Italo González Puelles | Product Owner TI</title>
+    <title>Pablo González Puelles | Product Owner & Gestión Tecnológica</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --bg: #fdfdfd;
-            --text-main: #2d3436;
-            --text-light: #636e72;
-            --accent: #0984e3;
-            --border: #dfe6e9;
+            --bg: #fdfdfd; --text-main: #2d3436; --text-light: #636e72;
+            --accent: #0984e3; --border: #dfe6e9;
         }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-        }
-
-        .wrapper {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        header {
-            margin-bottom: 60px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .job-headline {
-            font-size: 1.25rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin: 5px 0 20px 0;
-        }
-
-        .contact-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        .contact-grid a {
-            color: var(--text-light);
-            text-decoration: none;
-        }
-
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.7; margin: 0; padding: 0; }
+        .wrapper { max-width: 850px; margin: 0 auto; padding: 60px 20px; }
+        header { margin-bottom: 50px; border-bottom: 1px solid var(--border); padding-bottom: 30px; }
+        h1 { font-size: 2.5rem; margin: 0; font-weight: 800; letter-spacing: -0.02em; }
+        .job-headline { font-size: 1.25rem; color: var(--accent); font-weight: 500; margin: 5px 0 20px 0; }
+        .contact-grid { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.9rem; color: var(--text-light); }
+        .contact-grid a { color: var(--text-light); text-decoration: none; }
         section { margin-bottom: 50px; }
-
-        h2 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-light);
-            margin-bottom: 25px;
-            border-left: 3px solid var(--accent);
-            padding-left: 15px;
-        }
-
-        .exp-card {
-            margin-bottom: 35px;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
-        }
-
-        .exp-role {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin: 0;
-        }
-
-        .exp-company {
-            color: var(--text-light);
-            font-weight: 500;
-            font-size: 1rem;
-        }
-
-        .exp-date {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            font-weight: 600;
-        }
-
-        ul {
-            padding-left: 18px;
-            margin-top: 10px;
-            color: var(--text-light);
-        }
-
-        li { margin-bottom: 8px; }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .tag-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .tag {
-            background: #f1f2f6;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .maker-note {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 8px;
-            font-style: italic;
-            color: var(--text-light);
-        }
-
-        footer {
-            margin-top: 80px;
-            padding: 30px 0;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        @media (max-width: 600px) {
-            .exp-header { flex-direction: column; }
-            h1 { font-size: 1.8rem; }
-        }
+        h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 25px; border-left: 3px solid var(--accent); padding-left: 15px; }
+        .exp-card { margin-bottom: 30px; }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .exp-role { font-weight: 700; font-size: 1.1rem; margin: 0; }
+        .exp-company { color: var(--text-light); font-weight: 500; }
+        .exp-date { font-size: 0.85rem; color: var(--text-light); font-weight: 600; }
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .skill-box { background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid var(--border); }
+        .project-item { margin-bottom: 15px; padding-left: 10px; border-left: 2px solid #eee; }
+        footer { margin-top: 60px; padding: 30px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: var(--text-light); }
     </style>
 </head>
 <body>
@@ -160,61 +35,36 @@
 <div class="wrapper">
     <header>
         <h1>Pablo Italo González Puelles</h1>
-        <p class="job-headline">Product Owner TI</p>
+        <p class="job-headline">Product Owner | Estrategia de Producto & Gestión IT</p>
         <div class="contact-grid">
+            <span><i class="fas fa-globe"></i> pigp.cl</span>
             <span><i class="fas fa-envelope"></i> pigonzalezp977@gmail.com</span>
             <a href="https://www.linkedin.com/in/pablo-g-85a569140/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <span><i class="fas fa-map-marker-alt"></i> Santiago, Chile</span>
         </div>
     </header>
 
     <section>
-        <h2>Trayectoria Profesional</h2>
-        
+        <h2>Trayectoria en Gestión</h2>
         <div class="exp-card">
             <div class="exp-header">
                 <p class="exp-role">Product Owner</p>
-                <span class="exp-date">2012 — A la fecha</span>
+                <span class="exp-date">2012 — Actualidad</span>
             </div>
             <span class="exp-company">Clínica Alemana de Santiago</span>
-            <ul>
-                <li>Liderazgo en Gestor de Calidad de Datos y Clientes V4.</li>
-                <li>Migración a arquitectura Kubernetes y gestión de indicadores.</li>
-            </ul>
+            <p style="font-size: 0.95rem; margin-top: 10px;">Liderazgo estratégico en la definición y evolución del producto para la Calidad de Datos. Responsable de la visión del producto, priorización del backlog y alineación de stakeholders en procesos de migración crítica hacia arquitecturas modernas (Kubernetes).</p>
         </div>
-
         <div class="exp-card">
             <div class="exp-header">
-                <p class="exp-role">Consultor / Analista de Proyectos</p>
+                <p class="exp-role">Consultor de Proyectos & Analista</p>
                 <span class="exp-date">2006 — 2012</span>
             </div>
             <span class="exp-company">Everis (NTT DATA)</span>
-            <ul>
-                <li>Responsable JEE en La Araucana y Desarrollo en BI/ETL en LAN.</li>
-                <li>Implantación de CMMI Nivel 3 en proyectos Movistar.</li>
-            </ul>
+            <p style="font-size: 0.95rem; margin-top: 10px;">Gestión y ejecución de soluciones complejas para grandes clientes (Movistar, LAN). Transición exitosa desde el desarrollo técnico senior hacia la gestión de proyectos bajo estándares CMMI.</p>
         </div>
     </section>
 
     <section>
-        <h2>Educación & Formación</h2>
-        
-        <div class="exp-card">
-            <div class="exp-header">
-                <p class="exp-role">Diplomado en IA Orientada a la Salud</p>
-                <span class="exp-date">2025</span>
-            </div>
-            <span class="exp-company">Universidad Técnica Federico Santa María</span>
-        </div>
-
-        <div class="exp-card">
-            <div class="exp-header">
-                <p class="exp-role">Inglés Nivel Medio</p>
-                <span class="exp-date">2023</span>
-            </div>
-            <span class="exp-company">Universidad Católica</span>
-        </div>
-
+        <h2>Formación Estratégica</h2>
         <div class="exp-card">
             <div class="exp-header">
                 <p class="exp-role">Diplomado en Gestión de Proyectos Informáticos</p>
@@ -222,60 +72,72 @@
             </div>
             <span class="exp-company">Universidad de Chile</span>
         </div>
-
         <div class="exp-card">
             <div class="exp-header">
-                <p class="exp-role">Ingeniero de Ejecución en Informática</p>
+                <p class="exp-role">Diplomado en IA Orientada a la Salud</p>
+                <span class="exp-date">2025</span>
             </div>
-            <span class="exp-company">Universidad Tecnológica Metropolitana</span>
+            <span class="exp-company">Universidad Técnica Federico Santa María</span>
+        </div>
+        <div class="exp-card">
+            <div class="exp-header"><p class="exp-role">Ingeniería de Ejecución en Informática</p></div>
+            <span class="exp-company">UTEM</span>
         </div>
     </section>
 
     <section>
-        <h2>Especialidades</h2>
+        <h2>Competencias Técnicas & Maker</h2>
         <div class="skills-container">
             <div class="skill-box">
-                <div class="tag-list">
-                    <span class="tag">Java Architecture</span>
-                    <span class="tag">Spring Boot</span>
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Product Ownership</span>
-                    <span class="tag">Agile / Scrum</span>
+                <h3 style="font-size: 1rem; margin-top: 0;"><i class="fas fa-code-branch"></i> Background Técnico</h3>
+                <p style="font-size: 0.85rem; color: var(--text-light);">Sólida base como desarrollador autodidacta con amplia experiencia en entornos <strong>Java/J2EE</strong>, lo que permite una comunicación fluida con equipos de ingeniería y una toma de decisiones informada.</p>
+            </div>
+            <div class="skill-box">
+                <h3 style="font-size: 1rem; margin-top: 0;"><i class="fas fa-tools"></i> Proyectos Maker</h3>
+                <div class="project-item">
+                    <strong>Carpintería & 3D:</strong> Diseño funcional y construcción de estructuras en madera combinadas con fabricación digital (Bambu Lab).
                 </div>
             </div>
         </div>
     </section>
 
-<section>
-        <h2>Intereses y Aficiones </h2>
-        <div class="skills-container">
-            <div class="skill-box">
-                <h3>Maker & Tecnología</h3>
-                <div class="tag-list">
-                    <span class="tag">Impresión 3D</span>
-                    <span class="tag">Diseño Funcional</span>
-                    <span class="tag">Restauración de Audio Vintage</span>
-                    <span class="tag">Retrogaming</span>
-                </div>
-            </div>
-            <div class="skill-box">
-                <h3>Proyectos Manuales</h3>
-                <div class="tag-list">
-                    <span class="tag">Carpintería</span>
-                    <span class="tag">Construcción DIY</span>
-                    <span class="tag">Muebles a Medida</span>
-                </div>
-            </div>
-        </div>
-        <div class="maker-note" style="margin-top: 20px;">
-            Este equilibrio entre la alta tecnología y el trabajo artesanal define mi enfoque para resolver problemas: precisión, paciencia y una búsqueda constante de la funcionalidad.
+    <section>
+        <h2>Radar de Innovación (Live)</h2>
+        <div id="news-container" class="skills-container">
+            <p style="color: var(--text-light); font-style: italic;">Sincronizando tendencias en gestión y tecnología...</p>
         </div>
     </section>
 
     <footer>
-        <p>Pablo González Puelles — 2026</p>
+        <p>Pablo González Puelles — 2026 | Perfil orientado a la Gestión y Resultados</p>
     </footer>
 </div>
+
+<script>
+    async function loadTechNews() {
+        const RSS_URL = `https://techcrunch.com/feed/`;
+        const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
+        try {
+            const response = await fetch(API_URL);
+            const data = await response.json();
+            const container = document.getElementById('news-container');
+            container.innerHTML = '';
+            data.items.slice(0, 3).forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'skill-box';
+                card.innerHTML = `
+                    <h3 style="font-size: 0.9rem; margin-top: 0; color: var(--accent);">${item.title}</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.4;">${item.description.substring(0, 100).replace(/<[^>]*>/g, '')}...</p>
+                    <a href="${item.link}" target="_blank" style="font-size: 0.75rem; color: var(--accent); font-weight: bold; text-decoration: none;">Seguir leyendo →</a>
+                `;
+                container.appendChild(card);
+            });
+        } catch (error) {
+            document.getElementById('news-container').innerHTML = "<p>Servicio de noticias momentáneamente fuera de línea.</p>";
+        }
+    }
+    loadTechNews();
+</script>
 
 </body>
 </html>
