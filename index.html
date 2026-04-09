@@ -101,10 +101,10 @@
         </div>
     </section>
 
-    <section>
-        <h2>Radar de Innovación (Live)</h2>
+<section>
+        <h2>Radar de Innovación & Cultura Maker (Live)</h2>
         <div id="news-container" class="skills-container">
-            <p style="color: var(--text-light); font-style: italic;">Sincronizando tendencias en gestión y tecnología...</p>
+            <p style="color: var(--text-light); font-style: italic;">Sincronizando últimas tendencias en IA, 3D y Madera...</p>
         </div>
     </section>
 
@@ -114,30 +114,48 @@
 </div>
 
 <script>
-    async function loadTechNews() {
-        const RSS_URL = `https://techcrunch.com/feed/`;
-        const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
-        try {
-            const response = await fetch(API_URL);
-            const data = await response.json();
+        async function loadMultiNews() {
+            // Definimos fuentes para cada uno de tus pilares
+            const feeds = [
+                { url: 'https://techcrunch.com/category/artificial-intelligence/feed/', label: 'IA' },
+                { url: 'https://3dprintingindustry.com/feed/', label: 'Impresión 3D' },
+                { url: 'https://www.popularwoodworking.com/feed/', label: 'Carpintería' },
+                { url: 'https://www.infoq.com/feed/', label: 'Desarrollo' }
+            ];
+
             const container = document.getElementById('news-container');
             container.innerHTML = '';
-            data.items.slice(0, 3).forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'skill-box';
-                card.innerHTML = `
-                    <h3 style="font-size: 0.9rem; margin-top: 0; color: var(--accent);">${item.title}</h3>
-                    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.4;">${item.description.substring(0, 100).replace(/<[^>]*>/g, '')}...</p>
-                    <a href="${item.link}" target="_blank" style="font-size: 0.75rem; color: var(--accent); font-weight: bold; text-decoration: none;">Seguir leyendo →</a>
-                `;
-                container.appendChild(card);
-            });
-        } catch (error) {
-            document.getElementById('news-container').innerHTML = "<p>Servicio de noticias momentáneamente fuera de línea.</p>";
+
+            for (const feed of feeds) {
+                const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
+                
+                try {
+                    const response = await fetch(API_URL);
+                    const data = await response.json();
+                    
+                    if (data.items && data.items.length > 0) {
+                        const item = data.items[0]; // Tomamos la noticia más reciente de cada categoría
+                        const card = document.createElement('div');
+                        card.className = 'skill-box';
+                        card.style.borderTop = "4px solid var(--accent)";
+                        
+                        card.innerHTML = `
+                            <span style="font-size: 0.7rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;">${feed.label}</span>
+                            <h3 style="font-size: 0.95rem; margin: 8px 0; color: var(--text-main);">${item.title}</h3>
+                            <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.4; margin-bottom: 12px;">
+                                ${item.description.substring(0, 90).replace(/<[^>]*>/g, '')}...
+                            </p>
+                            <a href="${item.link}" target="_blank" style="font-size: 0.75rem; color: var(--accent); font-weight: bold; text-decoration: none;">Ver novedad →</a>
+                        `;
+                        container.appendChild(card);
+                    }
+                } catch (error) {
+                    console.error(`Error cargando ${feed.label}:`, error);
+                }
+            }
         }
-    }
-    loadTechNews();
-</script>
+        loadMultiNews();
+    </script>
 
 </body>
 </html>
